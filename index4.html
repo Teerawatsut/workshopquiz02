@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&family=Monomaniac+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+
+        body {
+
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .home-section {
+            background-image: url(./images/04/Home01.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+
+        }
+
+        .home-navbar {
+            display: flex;
+            gap: 100px;
+        }
+
+        .logo-bar {
+            margin-left: 100px;
+            padding: 30px 20px;
+        }
+
+        .menu-bar {
+            margin-top: 10px;
+            padding: 50px;
+
+        }
+
+        .menu-bar a {
+            font-family: Poppins;
+            font-size: 22px;
+            font-weight: 600;
+            color: #F5F5F5;
+            margin: 20px;
+        }
+
+        .menu-bar #a {
+            color: #E9BD8C;
+        }
+
+        .home-title {
+            display: flex;
+            flex-direction: column;
+            margin-left: 120px;
+            margin-top: 100px;
+        }
+
+        .home-title h3 {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            color: #E9BD8C;
+            margin: 0;
+        }
+
+        .home-title h1 {
+            font-family: Sansita Swashed;
+            font-size: 74px;
+            font-weight: 400;
+            color: #F5F5F5;
+            margin: 0;
+        }
+
+        .home-footer {
+            display: flex;
+            margin-top: 150px;
+            margin-left: 120px;
+            gap: 50px;
+        }
+
+        .home-footer button {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            color: #F5F5F5;
+            background-color: #933C24;
+            border: 1px solid#000000;
+            border-radius: 8px;
+            padding: 24px 38px;
+
+        }
+
+
+        .home-footer h3 {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            color: #E9BD8C;
+        }
+
+        /* topproducts-section */
+        .topproducts-navbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .topproducts-navbar h1 {
+            font-family: Sansita Swashed;
+            font-size: 64px;
+            font-weight: 600;
+            color: #111111;
+        }
+
+        .products-row1 {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+
+        }
+
+        .products-row2 {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .products {
+            
+            width: 360px;
+            height: 411px;
+            margin-bottom: 20px;
+            background-image: url(./images/04/Rectangle\ 69.png);
+        }
+
+        .products-text1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #FFFFFF;
+            padding: 0 30px;
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+
+        }
+
+        .products-text1 #a {
+            border: 1px solid#F5F5F5;
+            border-radius: 50%;
+            font-weight: 39;
+            padding: 13px 20px;
+            font-size: 20px;
+            font-weight: 500;
+
+        }
+
+        .products-text2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            margin: 0;
+
+
+        }
+
+        .products-text2 h3 {
+            color: #FFFFFF;
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .products-text2 button {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 500;
+            color: #FFFFFF;
+            background-color: #933C24;
+            border-radius: 4px;
+            border: none;
+            padding: 4px 12px;
+            cursor: pointer;
+        }
+
+        .products-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 50px;
+            width: 257px;
+            height: 257px;
+            
+
+        }
+
+        /* promotion-section */
+        .promotion-section {
+            background-image: url(./images/promotion-background.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 100px;
+            height: 1280px;
+            height: 550px;
+        }
+
+        .promotion-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .promotion-text h1 {
+            font-family: Sansita Swashed;
+            font-size: 48px;
+            font-weight: 500;
+            color: #933C24;
+            text-align: center;
+            margin: 0;
+            margin-top: 100px;
+
+        }
+
+        .promotion-text h3 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            color: #5D5D5D;
+            text-align: center;
+        }
+
+        .promotion-text button {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            color: #F9F6F1;
+            border-radius: 10px;
+            background-color: #933C24;
+            padding: 23px 50px;
+        }
+
+        /* explore-section */
+        .explore-section {
+            margin-top: 200px;
+        }
+
+        .explore-navbar {
+            text-align: center;
+        }
+
+        .explore-navbar h1 {
+            font-family: Sansita Swashed;
+            font-size: 64px;
+            font-weight: 600;
+            color: #111111;
+        }
+
+        .explore-menu {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+
+        .explore-menu a {
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 600;
+            color: #5D5D5D;
+        }
+
+        .explore-menu a.active {
+            border-bottom: 5px solid#933C24;
+        }
+
+        .explore-menu a:hover {
+            border-bottom: 5px solid#933C24;
+        }
+
+
+        .explore-products {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .explore-products img {
+            width: 360px;
+            height: 350px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+
+        .explore-section hr {
+            border: 1px solid#D9D9D9;
+            margin: 10px 100px;
+        }
+
+        /* Aboutus-section */
+        .aboutus-section {
+            background-image: url(./images/04/about\ us.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 200px;
+            height: 1280px;
+            height: 550px;
+        }
+
+        .aboutus-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .aboutus-text h1 {
+            font-family: Sansita Swashed;
+            font-size: 48px;
+            font-weight: 600;
+            color: #F5F5F5;
+            margin-top: 100px;
+        }
+
+        .aboutus-text h3 {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            color: #B9B9B9;
+            text-align: center;
+            margin: 0;
+        }
+
+        .aboutus-text button {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            color: #F5F5F5;
+            background-color: #933C24;
+            padding: 23px 35px;
+            margin-top: 50px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        /* Featured-section */
+        .featured-navbar {
+            text-align: center;
+
+        }
+
+        .featured-navbar h1 {
+            font-family: Sansita Swashed;
+            font-size: 64px;
+            font-weight: 600;
+            color: #111111;
+            margin-top: 100px;
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .featured-products img {
+            border-radius: 8px;
+
+        }
+
+        .featured-item h3 {
+            font-family: Inter;
+            font-weight: 600;
+            font-size: 32px;
+            color: #000000;
+
+        }
+
+        .featured-item p {
+            font-family: Inter;
+            font-weight: 600;
+            font-size: 32px;
+            color: #000000;
+        }
+
+        .item-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Footer-section */
+        .footer-secion {
+            background-image: url(./images/04/BGLOW.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 200px;
+            height: 1280px;
+            height: 633px;
+        }
+
+        .footer-navbar {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid#E9BD8D33;
+            margin: 0 100px;
+
+        }
+
+        .footer-navbar .social-bar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: #E9BD8C;
+            margin-right: 200px;
+            font-size: 30px;
+        }
+
+        .footer-navbar h3 {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .footer-title {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-title .aboutus {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .footer-title .explore {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .footer-title h3 {
+            font-family: Inter;
+            font-size: 36px;
+            font-weight: 700;
+            color: #E9BD8D;
+        }
+
+        .aboutus p {
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 600;
+            color: #F5F5F5;
+            margin: 0;
+
+        }
+
+        .explore p {
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 600;
+            color: #F5F5F5;
+            margin: 0;
+        }
+
+        .new-item {
+            display: flex;
+            padding: 10px 0;
+
+        }
+
+        .date {
+            font-family: Poppins;
+            font-size: 18px;
+            font-weight: 400;
+            color: #E9BD8C;
+            margin: 0;
+        }
+
+        .title {
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 500;
+            color: #F5F5F5;
+            margin: 0;
+        }
+
+        .new-text {
+            margin-left: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .footer P {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            color: #737373;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- home-section -->
+    <div class="home-section">
+
+        <div class="home-navbar">
+            <div class="logo-bar">
+                <img src="./images/04/KEITHSTON.png" alt="logo">
+            </div>
+
+            <div class="menu-bar">
+                <a id="a" href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Services</a>
+            </div>
+        </div>
+
+        <div class="home-title">
+            <div class="text">
+                <h3>Delicious Cafe</h3>
+                <h1>Sweet Treats, <br> Perfect Eats</h1>
+            </div>
+        </div>
+
+        <div class="home-footer">
+            <button>Shop Now</button>
+            <h3>Learn More</h3>
+        </div>
+    </div>
+
+    <!-- topproducts-section -->
+    <div class="topproducts-section">
+        <div class="topproducts-navbar">
+            <h1>Top Products</h1>
+        </div>
+        <div class="topproducts-title">
+            <div class="products-row1">
+                <div class="products">
+                    <div class="products-img">
+                        <img src="./images/04/top1.png" alt="products1">
+                    </div>
+                    <div class="products-text1">
+                        <p>40 Baht</p>
+                        <p id="a">!</p>
+                    </div>
+                    <div class="products-text2">
+                        <h3>Whole Grain <br> Bread</h3>
+                        <button>Add</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="products-img">
+                        <img src="./images/04/top2.png" alt="products2">
+                    </div>
+                    <div class="products-text1">
+                        <p>40 Baht</p>
+                        <p id="a">!</p>
+                    </div>
+                    <div class="products-text2">
+                        <h3>Whole Grain <br> Bread</h3>
+                        <button>Add</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="products-img">
+                        <img src="./images/04/top3.png" alt="products3">
+                    </div>
+                    <div class="products-text1">
+                        <p>40 Baht</p>
+                        <p id="a">!</p>
+                    </div>
+                    <div class="products-text2">
+                        <h3>Whole Grain <br> Bread</h3>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-row2">
+                <div class="products">
+                    <div class="products-img">
+                        <img src="./images/04/top4.png" alt="products4">
+                    </div>
+                    <div class="products-text1">
+                        <p>40 Baht</p>
+                        <p id="a">!</p>
+                    </div>
+                    <div class="products-text2">
+                        <h3>Whole Grain <br> Bread</h3>
+                        <button>Add</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="products-img">
+                        <img src="./images/04/top5.png" alt="products5">
+                    </div>
+                    <div class="products-text1">
+                        <p>40 Baht</p>
+                        <p id="a">!</p>
+                    </div>
+                    <div class="products-text2">
+                        <h3>Whole Grain <br> Bread</h3>
+                        <button>Add</button>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="products-img">
+                        <img src="./images/04/top6.png" alt="products6">
+                    </div>
+                    <div class="products-text1">
+                        <p>40 Baht</p>
+                        <p id="a">!</p>
+                    </div>
+                    <div class="products-text2">
+                        <h3>Whole Grain <br> Bread</h3>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promotion-section -->
+    <div class="promotion-section">
+        <div class="promotion-text">
+            <h1>20% Off Your <br> First Order</h1>
+            <h3>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br> Nesciunt rem.</h3>
+            <button>Learn More</button>
+        </div>
+    </div>
+
+    <!-- Explore-section -->
+    <div class="explore-section">
+        <div class="explore-navbar">
+            <h1>Explore More</h1>
+        </div>
+
+        <div class="explore-menu">
+            <a href="#" class="active">Cake</a>
+            <a href="#">Muffins</a>
+            <a href="#">Croissant</a>
+            <a href="#">Bread</a>
+            <a href="#">Tart</a>
+            <a href="#">Favorite</a>
+        </div>
+
+        <hr>
+
+        <div class="explore-title">
+            <div class="explore-products">
+                <img src="./images/04/ex01.png" alt="explore-products1">
+                <img src="./images/04/ex02.png" alt="explore-products2">
+                <img src="./images/04/ex03.png" alt="explore-products3">
+            </div>
+            <div class="explore-products">
+                <img src="./images/04/ex04.png" alt="explore-products4">
+                <img src="./images/04/ex05.png" alt="explore-products5">
+                <img src="./images/04/ex06.png" alt="explore-products6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Aboutus -section -->
+    <div class="aboutus-section">
+        <div class="aboutus-text">
+            <h1>About us</h1>
+            <h3>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br> Nesciunt rem odit labore unde <br>
+                nemo omnis sequi.</h3>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <!-- Featured-section -->
+    <div class="featured-section">
+        <div class="featured-navbar">
+            <h1>Featured Treats</h1>
+        </div>
+
+        <div class="featured-products">
+            <div class="featured-item">
+                <img src="./images/04/Ft01.png" alt="PuffPastry">
+                <div class="item-text">
+                    <h3>Puff Pastry </h3>
+                    <p>8 Baht</p>
+                </div>
+            </div>
+            <div class="featured-item">
+                <img src="./images/04/Ft02.png" alt="Doughnuts">
+                <div class="item-text">
+                    <h3>Puff Pastry </h3>
+                    <p>8 Baht</p>
+                </div>
+            </div>
+            <div class="featured-item">
+                <img src="./images/04/FT03.png" alt="Brownies">
+                <div class="item-text">
+                    <h3>Brownies</h3>
+                    <p>8 Baht</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer-section -->
+    <div class="footer-secion">
+        <div class="footer-navbar">
+            <div class="logo-bar">
+                <img src="./images/04/KEITHSTON.png" alt="logo">
+            </div>
+            <div class="social-bar">
+                <h3>Follow us</h3>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <div class="footer-title">
+            <div class="aboutus">
+                <h3>Abouut Us</h3>
+                <p>(02) 807-4500</p>
+                <p>info@sau.ac.th</p>
+                <p>19/1 Phetkasem Road <br>Nongkham Bangkok <br>10160</p>
+            </div>
+            <div class="explore">
+                <h3>Explore</h3>
+                <p>Home</p>
+                <p>Blog</p>
+                <p>Contact us</p>
+                <p>Services</p>
+            </div>
+            <div class="Recent">
+                <h3>Recent New</h3>
+
+                <div class="new-item">
+                    <img src="./images/04/RN01.png" alt="products1">
+                    <div class="new-text">
+                        <p class="date">June 14,2025</p>
+                        <p class="title">Puff pastry bliss.</p>
+                    </div>
+                </div>
+                <div class="new-item">
+                    <img src="./images/04/RN02.png" alt="products2">
+                    <div class="new-text">
+                        <p class="date">June 14,2025</p>
+                        <p class="title">Puff pastry bliss.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© 2025 Bake House. All rights reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+    }
+
+    .menu-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        background: black;
+        padding: 0 30px;
+    }
+
+    .menu-bar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        margin-right: 40px;
+        white-space: nowrap;
+    }
+
+    .menu-links {
+        display: flex;
+        flex: 1;
+        /* ใช้พื้นที่ที่เหลือ */
+        align-items: center;
+        justify-content: center;
+        /* เมนูอยู่กลาง */
+    }
+
+    .menu-links a {
+        flex: 1;
+        /* Home / About / Portfolio กินพื้นที่เท่ากัน */
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        color: white;
+        position: relative;
+    }
+
+    .menu-links a:hover {
+        text-decoration: underline;
+        text-decoration-color: blue;
+    }
+
+    /* ปุ่ม Let's talk */
+    .menu-links .talk-btn {
+        flex: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 20px;
+        padding: 5px 15px;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+
+    .menu-links .talk-btn:hover {
+        color: white;
+        /* คงสีตัวอักษรเป็นขาว */
+        background-color: black;
+        /* คงพื้นหลังเป็นดำ */
+        text-decoration: underline;
+        /* ขีดเส้นใต้ */
+        text-decoration-color: blue;
+        /* เส้นใต้สีน้ำเงิน */
+        text-underline-offset: 5px;
+        /* ระยะห่างเส้นใต้กับข้อความ */
+    }
+
+
+
+
+
+    .title-section {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    position: relative;
+}
+
+/* Contact ซ้ายบน */
+.contact-left {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: white;
+    font-family: Lora;
+}
+
+/* ส่วนข้อความกลาง */
+.Text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* กึ่งกลางแนวตั้ง */
+    align-items: center;       /* กึ่งกลางแนวนอน */
+    text-align: center;
+    color: white;
+}
+
+
+
+    .Text-content h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .Text-content p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    #Tech1 {
+        text-align: center;
+        /* จัดข้อความให้อยู่กลาง */
+        margin-top: 500px;
+        /* เว้นระยะจากด้านบน (ต่ำกว่ารูป) */
+        font-size: 1.2rem;
+        color: white;
+        font-family: Inter;
+
+    }
+
+.social-bar {
+    display: flex;
+    justify-content: space-around; /* กระจายให้เท่า ๆ กัน */
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* หน้าจอเล็กลงบรรทัดใหม่ */
+    text-align: center; /* ให้ข้อความอยู่กลางใต้รูป */
+}
+
+.social-item img {
+    max-width: 80px;  /* ขนาดรูป */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* รูปอยู่กลางและเว้นระยะกับข้อความ */
+}
+
+.social-item p {
+    color: white;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+.social-item {
+    flex: 1; /* ให้แต่ละอันกว้างเท่า ๆ กัน */
+    margin: 10px;
+}
+
+
+.social-bar img {
+    max-width: 100px; /* จำกัดขนาดรูป */
+    flex: 1;          /* ให้แต่ละรูปกินพื้นที่เท่า ๆ กัน */
+    margin: 100px;
+    object-fit: contain;
+}
+
+
+
+    /* ===== PROFILE IMAGE ===== */
+    .img-section {
+        text-align: right;
+        padding: 100px;
+        margin: 10px;
+    }
+
+    .img-show {
+        border: 2px solid #01d5a2;
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .img-show img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .Text-content {
+        flex: 1;
+    }
+
+    .Text-content h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-family: Lora;
+    }
+
+    .Text-content p {
+        font-family: Inter;
+        margin: 20px 0;
+        line-height: 1.6;
+        color: #aaa;
+    }
+
+    .text h1 {
+
+        font-family: Inter;
+    }
+
+    .tech-stack {
+        text-align: center;
+        /* จัดรูปให้อยู่กึ่งกลางแนวนอน */
+    }
+
+    .tech-stack img {
+        width: 30px;
+        margin: 10px;
+    }
+</style>
+
+<body>
+
+    <div class="Page01">
+        <div class="menu-bar">
+        <div class="logo">Noom SAU</div>
+        <div class="menu-links">
+            <a href="http://127.0.0.1:5501/index05.html">Home</a>
+            <a href="http://127.0.0.1:5501/about.html">About</a>
+            <a href="http://127.0.0.1:5501/portflio.html">Portfolio</a>
+            <a href="http://127.0.0.1:5501/contact.html">contact</a>
+            <button class="talk-btn">Let's talk</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="home-title">
+        <div class="text">
+            <h1>Noom SAU</h1>
+
+        </div>
+    </div>
+   <div class="title-section">
+    <!-- Contact ชิดซ้ายบน -->
+    <div class="contact-left">
+        <h1>Contact</h1>
+    </div>
+
+    <!-- ส่วนกลาง -->
+    <div class="Text-content">
+        <h2>Let's Connect</h2>
+        <p>Don't be a strange! Say Hello and let's collaborate</p>
+
+        <!-- Social bar -->
+<div class="social-bar">
+    <div class="social-item">
+        <img src="./images/Contact/1.png" alt="Contact 1">
+        <p>S6852D10037@live.sau.ac.th</p>
+    </div>
+    <div class="social-item">
+        <img src="./images/Contact/2.png" alt="Contact 2">
+        <p>Thailand, Bangkok</p>
+    </div>
+    <div class="social-item">
+        <img src="./images/Contact/3.png" alt="Contact 3">
+        <p>Noom SAU</p>
+    </div>
+</div>
+
+
+</body>
+
+</html>

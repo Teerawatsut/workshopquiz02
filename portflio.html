@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+    }
+
+    .menu-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        background: black;
+        padding: 0 30px;
+    }
+
+    .menu-bar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        margin-right: 40px;
+        white-space: nowrap;
+    }
+
+    .menu-links {
+        display: flex;
+        flex: 1;
+        /* ใช้พื้นที่ที่เหลือ */
+        align-items: center;
+        justify-content: center;
+        /* เมนูอยู่กลาง */
+    }
+
+    .menu-links a {
+        flex: 1;
+        /* Home / About / Portfolio กินพื้นที่เท่ากัน */
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        color: white;
+        position: relative;
+    }
+
+    .menu-links a:hover {
+        text-decoration: underline;
+        text-decoration-color: blue;
+    }
+
+    /* ปุ่ม Let's talk */
+    .menu-links .talk-btn {
+        flex: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 20px;
+        padding: 5px 15px;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+
+    /* ปุ่ม Let's talk1 */
+    .talk-btn1 {
+        align-self: flex-start;
+        /* บังคับให้ปุ่มชิดซ้าย (หรือ center ก็ได้) */
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 10px;
+        padding: 8px 20px;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    /* ปุ่ม Let's talk1 */
+    .talk-btn2 {
+        align-self: flex-start;
+        /* บังคับให้ปุ่มชิดซ้าย (หรือ center ก็ได้) */
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 10px;
+        padding: 8px 20px;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+
+
+    .title-section {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin: 60px 0;
+        padding: 0 50px;
+        flex-direction: row;
+        /* รูปซ้าย ข้อความขวา */
+    }
+
+    .Text-content {
+        width: 50%;
+        /* ครึ่งจอด้านซ้าย */
+        display: flex;
+        flex-direction: column;
+        /* เรียง H1 กับ P แนวตั้ง */
+        justify-content: center;
+        /* กึ่งกลางแนวตั้ง */
+        align-items: flex-start;
+        /* ชิดซ้าย */
+        padding-left: 50px;
+        /* ระยะห่างจากขอบซ้าย */
+        color: white;
+    }
+
+    .Text-content h1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .Text-content p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    #Tech1 {
+        text-align: center;
+        /* จัดข้อความให้อยู่กลาง */
+        margin-top: 500px;
+        /* เว้นระยะจากด้านบน (ต่ำกว่ารูป) */
+        font-size: 1.2rem;
+        color: white;
+        font-family: Inter;
+
+    }
+
+    .social-bar i {
+
+        font-size: 2.5rem;
+        /* ขนาดไอคอน (ปรับได้ เช่น 2rem, 3rem) */
+        margin: 0 15px;
+        /* ระยะห่างระหว่างไอคอน */
+        cursor: pointer;
+        transition: color 0.3s, transform 0.2s;
+
+
+    }
+
+
+
+    /* ===== PROFILE IMAGE ===== */
+    .img-section {
+        text-align: center;
+        position: relative;
+        margin-left: 50px;
+        /* ขยับกล่องรูปทั้งกล่องไปทางขวา */
+        padding: 0;
+    }
+
+    .img-section img {
+        max-width: 400px;
+        /* ป้องกันไม่ให้รูปใหญ่เกินกล่อง */
+        height: auto;
+        /* คงสัดส่วนเดิม */
+        margin-left: 50px;
+        /* ถ้าต้องการขยับไปทางขวา */
+    }
+
+
+    /* ข้อความ About Me */
+    .about-title {
+        color: white;
+        font-size: 3rem;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: 50px;
+
+    }
+
+
+    .Text-content {
+        display: flex;
+        flex-direction: column;
+        /* จัดเรียงจากบนลงล่าง */
+        align-items: flex-start;
+        /* ให้ชิดซ้าย (หรือเปลี่ยนเป็น center ถ้าอยากให้อยู่กลาง) */
+    }
+
+    .Text-content h1 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-family: Lora;
+    }
+
+    .Text-content p {
+        margin-bottom: 20px;
+        /* ระยะห่างระหว่างข้อความกับปุ่ม */
+    }
+
+    .text h1 {
+
+        font-family: Inter;
+    }
+
+    .tech-stack {
+        text-align: center;
+        /* จัดรูปให้อยู่กึ่งกลางแนวนอน */
+    }
+
+    .tech-stack img {
+        width: 30px;
+        margin: 10px;
+    }
+
+
+    .title-section1 {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin: 60px 0;
+        padding: 0 50px;
+        flex-direction: row-reverse;
+        /* รูปขวา ข้อความซ้าย */
+    }
+
+
+    .img-section1 img {
+        max-width: 300px;
+        /* กำหนดขนาดสูงสุด */
+        height: auto;
+        /* คงอัตราส่วนเดิม */
+        border-radius: 10px;
+        /* ทำให้มุมมน ถ้าไม่ต้องการเอาออกได้ */
+    }
+
+    .Text-content1 {
+        flex: 1;
+        /* ให้ข้อความกินพื้นที่ที่เหลือ */
+    }
+
+    .Text-content1 h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .Text-content1 p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #aaa;
+    }
+
+    .talk-btn2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 8px 20px;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .talk-btn2:hover {
+        background-color: white;
+        color: black;
+    }
+
+
+
+    .title-section2 {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin: 60px 0;
+        padding: 0 50px;
+        flex-direction: row;
+        /* รูปซ้าย ข้อความขวา */
+    }
+
+    .img-section2 img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .Text-content2 {
+        flex: 1;
+        /* ให้ข้อความกินพื้นที่ที่เหลือ */
+    }
+
+    .Text-content2 h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .Text-content2 p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #aaa;
+    }
+
+    .title-section3 {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin: 60px 0;
+        padding: 0 50px;
+        flex-direction: row-reverse;
+        /* ✅ รูปขวา ข้อความซ้าย */
+    }
+
+    .img-section3 img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .Text-content3 {
+        flex: 1;
+        color: white;
+    }
+
+    .Text-content3 h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .Text-content3 p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #aaa;
+    }
+
+    .talk-btn3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 8px 20px;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .talk-btn3:hover {
+        background-color: white;
+        color: black;
+    }
+
+    /* group icon */
+
+    .button-group {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        /* ระยะห่างระหว่าง View กับ Git code */
+        margin-top: 20px;
+    }
+
+    .git-link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+        /* เอาเส้นใต้ลิงก์ออก */
+        transition: 0.3s;
+    }
+
+    .git-link i {
+        font-size: 1.2rem;
+    }
+
+    .git-link:hover {
+        color: #aaa;
+        /* เปลี่ยนสีเวลา hover */
+    }
+</style>
+
+<!-- NAVBAR -->
+<div class="menu-bar">
+    <div class="logo">Noom SAU</div>
+    <div class="menu-links">
+        <a href="http://127.0.0.1:5501/index05.html">Home</a>
+        <a href="http://127.0.0.1:5501/about.html">About</a>
+        <a href="http://127.0.0.1:5501/portflio.html">Portfolio</a>
+        <a href="http://127.0.0.1:5501/contact.html">contact</a>
+        <button class="talk-btn">Let's talk</button>
+    </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="title-section">
+    <div class="img-section">
+        <p class="about-title">Portfolio</p>
+        <img src="./images/portfolio/Bikes and beards 1.png" alt="Profile Photo">
+    </div>
+    <div class="Text-content">
+        <h1>Bikes and Beards</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis sequi
+            hic sit laudantium repellendus recusandae vitae ea laborum, ipsa nisi eos autem...</p>
+        <button class="talk-btn1">View</button>
+    </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="title-section1">
+    <div class="img-section1">
+        <img src="./images/portfolio/Learnify 1.png" alt="Profile Photo">
+    </div>
+    <div class="Text-content1">
+        <h1>Learnify</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis sequi hic
+            sit laudantium repellendus recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis consequuntur velit
+            nesciunt aperiam odit excepturi repellat libero in enim praesentium! Ex dicta est suscipit ipsam voluptate
+            tempora voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit autem deserunt asperiores vitae
+            ea, libero sed! Libero fugit non, placeat nulla.</p>
+        <button class="talk-btn2">View</button>
+    </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="title-section2">
+    <div class="img-section2">
+        <img src="./images/portfolio/Figma to HTML (Community) 1.png" alt="Profile Photo">
+    </div>
+    <div class="Text-content2">
+        <h1>Anime-X</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis sequi hic
+            sit laudantium repellendus recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis consequuntur velit
+            nesciunt aperiam odit excepturi repellat libero in enim praesentium! Ex dicta est suscipit ipsam voluptate
+            tempora voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit autem.</p>
+        <button class="talk-btn2">View</button>
+    </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="title-section3">
+    <div class="img-section3">
+        <img src="./images/portfolio/EdTech 1.png" alt="Profile Photo">
+    </div>
+    <div class="Text-content3">
+        <h1>Anime-X</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis sequi hic
+            sit laudantium repellendus recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis consequuntur velit
+            nesciunt aperiam odit excepturi repellat libero in enim praesentium! Ex dicta est suscipit ipsam voluptate
+            tempora voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit autem deserunt asperiores vitae
+            ea, libero sed! Libero fugit non, placeat nulla quae odio asperiores ratione! Accusantium placeat dolorem
+            minus eos excepturi modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit.</p>
+
+        <!-- ✅ ปุ่มกลุ่ม -->
+        <div class="button-group">
+            <button class="talk-btn">View</button>
+            <a href="https://github.com/username/repo" target="_blank" class="git-link">
+                <i class="fab fa-github"></i> Git code
+            </a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
